@@ -1,1 +1,1 @@
-SocialMedia
+Katmanli mimari kullanarak hem kendimi katmanli mimaride hem de veritabani yoneiminde (MongoDB ve MSSQL) gelistirmek icin olusturdugum projem. Her ne kadar su anda tamamlanmamis ve bir gorunume sahip olmasa da diger sosyal medya sayfalarinin kendilerine ozgu basardigi ve populerlik kazandigi kisimlari analiz edip onlari da projeme entegre edecegim. Ayrica kendi fikrim olan bazi populerlik saglayacak olan ozellikleri de bu projeye entegre edecegim.
