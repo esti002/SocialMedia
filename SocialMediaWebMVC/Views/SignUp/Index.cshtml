@@ -1,0 +1,50 @@
+﻿@model UserSignUpViewModel
+@{
+    Layout = null;
+}
+<form asp-action="Index" method="post">
+    <div>
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+    <div style="border-style:solid; border-radius:10px; width:700px; margin:auto;">
+        <br />
+        <div>
+            <h1 style="margin-left:150px; margin-right:200px; float:left;">SIGN IN</h1>
+            <img src="~/Icons/closeBondIcon.png" style="float:right; margin-right:200px; margin-top:15px;" />
+        </div>
+        <br />
+        <div>
+            <span asp-validation-for="@Model.Name" class="text-danger"></span>
+            <input type="text" autocomplete="off" asp-for="@Model.Name" placeholder="Name" required="" style="float:left; margin-left:50px; margin-bottom:20px; width:280px; border-style:groove; border-radius:10px; height:40px" />
+            <span asp-validation-for="@Model.Surname" class="text-danger"></span>
+            <input type="text" autocomplete="off" asp-for="@Model.Surname" placeholder="Surname" required="" style="float:right; margin-right:50px; margin-bottom:20px; width:280px; border-style:groove; border-radius:10px; height:40px" />
+        </div>
+        <br />
+        <div>
+            <span asp-validation-for="@Model.Username" class="text-danger"></span>
+            <input type="text" autocomplete="off" asp-for="@Model.Username" placeholder="Username" required="" style="margin-left:50px; margin-bottom:20px; border-style:groove; width:600px; border-radius:10px; height:40px" />
+        </div>
+        <div>
+            <span asp-validation-for="@Model.Mail" class="text-danger"></span>
+            <input type="email" autocomplete="off" asp-for="@Model.Mail" placeholder="Mail" required="" style="margin-left:50px; margin-bottom:20px; border-style:groove; width:600px; border-radius:10px; height:40px" />
+        </div>
+        <div>
+            <span asp-validation-for="@Model.Password" class="text-danger"></span>
+            <input type="text" autocomplete="off" asp-for="@Model.Password" placeholder="Password" required="" style="margin-left:50px; margin-bottom:20px; border-style:groove; width:600px; border-radius:10px; height:40px" />
+        </div><div>
+            <span asp-validation-for="@Model.Birthday" class="text-danger"></span>
+            <input type="date" autocomplete="off" asp-for="@Model.Birthday" placeholder="Birthday Date" required="" style="margin-left:50px; margin-bottom:20px; border-style:groove; width:600px; border-radius:10px; height:40px" />
+        </div><div>
+            <span asp-validation-for="@Model.Gender" class="text-danger"></span>
+            <input type="number" autocomplete="off" asp-for="@Model.Gender" placeholder="Gender" required="" style="margin-left:50px; margin-bottom:20px; border-style:groove; width:600px; border-radius:10px; height:40px" />
+        </div><div style="margin-left:50px;">
+            <button style="background-color:forestgreen; border-style:solid; border-radius:10px; width:100px; height:35px;">Sign In</button>
+        </div>
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <br />
+        <br />
+    </div>
+</form>

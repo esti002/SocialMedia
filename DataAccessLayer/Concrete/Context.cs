@@ -1,4 +1,5 @@
 ﻿using EntityLayer.MSSQL;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,12 +9,11 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Concrete
 {
-    public class Context : DbContext
+    public class Context : IdentityDbContext<AppUser,AppRole,int>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("server = (localdb)\\MSSQLLocalDB; database = SocialMediaDB; integrated security = true;");
         }
-        public DbSet<Member> Members { get; set; }
     }
 }

@@ -7,11 +7,38 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Controllers\NewController.cs" />
+    <Compile Remove="Views\SignIn\**" />
+    <Content Remove="Views\SignIn\**" />
+    <EmbeddedResource Remove="Views\SignIn\**" />
+    <None Remove="Views\SignIn\**" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Controllers\HomeController1.cs" />
+    <Compile Remove="Controllers\NewController.cs" />
+    <Compile Remove="Controllers\SignInController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\HomeController1\Index.cshtml" />
+    <Content Remove="Views\Shared\.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\HomeController1\" />
     <Folder Include="Views\New\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
   </ItemGroup>
 
 </Project>

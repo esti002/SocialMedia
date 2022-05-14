@@ -1,0 +1,69 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/css/bootstrap.min.css" integrity="sha512-6KY5s6UI5J7SVYuZB4S/CZMyPylqyyNZco376NM2Z8Sb8OxEdp02e1jkKk/wZxIEmjQ6DRCEBhni+gpr9c4tvA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.1/js/bootstrap.min.js" integrity="sha512-ewfXo9Gq53e1q1+WDTjaHAGZ8UvCWq0eXONhwDuIoaH8xz2r96uoAYaQCm1oQhnBfRXrvJztNXFsTloJfgbL5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta name="viewport" content="width=device-width" />
+    <title>Layout</title>
+</head>
+
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container" style="margin-left:10%">
+        <a class="navbar-brand" asp-area="" asp-page="/Index"><img src="~/Icons/CloseBondOnlyTextBig.png" style="width:150px"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+            <ul class="navbar-nav flex-grow-1">
+                <div style="margin-left:150px"></div>
+
+                <li class="nav-item">
+                    <input type="text" placeholder="Search.." style="border-style:groove; border-radius:10px; width:400px; height:45px;">
+                </li>
+                <div style="margin-left:5%"></div>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" name="Chats" asp-area="" asp-page="/Profile/Index"><img src="~/Icons/chatting.png"/></a>
+                    @*<button id="Button1" runat="server"><img src="~/Icons/chat.png" style="width=40px" /></button>
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Index" src="~/Icons/chat.png" sty>Home</a>*@
+                </li>
+
+                <div style="margin-left:5%"></div>
+
+                <li class="nav-item">
+                    <a class="nav-link text-dark" name="Notifications" asp-area="" asp-page="/Privacy"><img src="~/Icons/notification.png"/></a>
+                </li>
+
+                <div style="margin-left:5%"></div>
+
+                
+                <li class="nav-item">
+                    <a class="nav-link text-dark" name="Profile" asp-area="" asp-controller="Profile" asp-action="Index"><img src="~/Icons/avatar.png"/></a>
+                </li>
+                @*<li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                    *@
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<body>
+    @RenderBody()
+</body>
+</html>
